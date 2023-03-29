@@ -7,28 +7,37 @@ public class SListArray extends SList{
 
     public SListArray()
     {
-        SList[] myList = new SList[8];
-        //  myList = new SList[(myList.length*2)];
+        this._elements = new String[8];
     }
-    // creates an empty list
 
     public SListArray(String[] elements)
     {
-        SList[] myList = new SList[elements.length];
-        for (int i=0;i<elements.length;i++)
-            myList[i].set(i,elements[i]);
+        this._elements = new String[elements.length * 2];
+        for (int i=0; i<elements.length; i++) {
+            this._elements[i] = elements[i];
+        }
     }
 
     public int size() {
-        
+        return this._elements.length;
+    }
+
+    private String[] copy(int new_size, String[] elements) {
+        String[] new_elements = new String[new_size];
+        for (int i=0; i<elements.length; i++) {
+            new_elements[i] = elements[i];
+        }
+        return new_elements;
     }
 
     public String get(int position) {
-
+        return this._elements[position];
     }
 
     public String set(int position, String element) {
-
+        String old_element = this._elements[position];
+        this._elements[position] = element;
+        return old_element;
     }
 
     public String add(int position, String element)
