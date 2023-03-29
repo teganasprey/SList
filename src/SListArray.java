@@ -28,7 +28,7 @@ public abstract class SListArray extends SList{
         {
             myList.set(i,this.get(i));
         }
-        for (int i=this.size();i<newSize;i++)
+        for (int i=this.size();i<(anotherSList.size()+this.size());i++)
         {
             myList.set(i,anotherSList.get(i));
         }
@@ -37,10 +37,15 @@ public abstract class SListArray extends SList{
 
     public String add(int position, String element)
     {
-        
+        if(position<0||position>this.size())
+            return "Index out of bounds";
+        if (this.get(this.size()-1)!=null)
+        {
+            SListArray myList = new SListArray;
+            for (int i=0;i<=)
+        }
 
+
+            
     }
-
-// creates a list with the strings in elements
-// the ordering and size of this list will be the same as in elements
 }
