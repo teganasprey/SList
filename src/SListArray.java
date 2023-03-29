@@ -28,14 +28,16 @@ public abstract class SListArray extends SList{
         {
             myList.set(i,this.get(i));
         }
-
-        myList.set((this.size()+1),anotherSList);
-
+        for (int i=this.size();i<newSize;i++)
+        {
+            myList.set(i,anotherSList.get(i));
+        }
 
     }
 
     public String add(int position, String element)
     {
+        
 
     }
 
