@@ -36,10 +36,9 @@ public class SListArray extends SList{
         if (this.get(this.size()-1)!=null)
         {
             SListArray myList = new SListArray;
-            for (int i=0;i<)
-        }
-
-
+            for (int i=0;i<index-1)
+                myList.set(i,this.get(i));
             
+        }
     }
 }
