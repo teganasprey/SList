@@ -22,6 +22,14 @@ public abstract class SListArray extends SList{
     }
     public void append(SList anotherSList)
     {
+        int newSize=(anotherSList.size()+this.size())*2;
+        SListArray myList= new SListArray;
+        for (int i=0;i<this.size();i++)
+        {
+            myList.set(i,this.get(i));
+        }
+
+        myList.set((this.size()+1),anotherSList);
 
 
     }
