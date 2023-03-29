@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.LinkedList;
-public abstract class SListArray extends SList{
+public class SListArray extends SList{
 
     public SListArray()
     {
@@ -12,9 +12,7 @@ public abstract class SListArray extends SList{
     {
         SList[] myList = new SList[elements.length];
         for (int i=0;i<elements.length;i++)
-        {
             myList[i].set(i,elements[i]);
-        }
     }
     public SList commonStrings()
     {
@@ -25,13 +23,9 @@ public abstract class SListArray extends SList{
         int newSize=(anotherSList.size()+this.size())*2;
         SListArray myList= new SListArray;
         for (int i=0;i<this.size();i++)
-        {
             myList.set(i,this.get(i));
-        }
         for (int i=this.size();i<(anotherSList.size()+this.size());i++)
-        {
             myList.set(i,anotherSList.get(i));
-        }
 
     }
 
@@ -42,7 +36,7 @@ public abstract class SListArray extends SList{
         if (this.get(this.size()-1)!=null)
         {
             SListArray myList = new SListArray;
-            for (int i=0;i<=)
+            for (int i=0;i<)
         }
 
 
